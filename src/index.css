@@ -4,6 +4,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
 
+@layer components {
+  .v-input {
+    @apply border h-[51px] border-[#E1E1E1] rounded-lg py-[13px] px-[16px] placeholder:text-[#C1C1C1] focus:border-mRed outline-none w-full;
+  }
+
+  .v-btn {
+    @apply md:px-[40px] py-[13px] h-[51px] outline-none border-none rounded-lg text-[#ffffff] text-sm bg-[#000000] font-bold uppercase btn hover:bg-mRed;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -39,7 +39,7 @@ const Header: FC<Props> = () => {
 					</div>
 					<div className="navbar-end w-auto">
 						<label
-							htmlFor="connect-wallet"
+							htmlFor="add-product"
 							className="btn sm:px-[25px] py-[15px] outline-none normal-case border-none text-[#ffffff] grad-bg"
 						>
 							Add Product
