@@ -43,7 +43,6 @@ const ProductModal: FC<Props> = ({ values, setValues, addProduct }) => {
 								<div className="mb-[2rem]">
 									<input
 										type="number"
-										datatype='number'
 										value={values.price}
 										name="price"
 										onChange={(e) => handleChange(e)}

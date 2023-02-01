@@ -16,9 +16,7 @@ const Header: FC<Props> = ({ children }) => {
 								<img src="/images/menu.svg" alt="menu" className="w-[34px]" />
 							</label>
 						</div>
-						<div className="px-2 ">
-							<img src="/images/logo.svg" alt="logo" className="w-[8rem] md:w-[10rem] lg:w-auto" />
-						</div>
+						<div className="px-2 text-[#A02279] text-[1.5rem] font-bold">Vezeti</div>
 					</div>
 
 					<div className="hidden md:block">
@@ -54,7 +52,7 @@ const Header: FC<Props> = ({ children }) => {
 				<label htmlFor="my-drawer-3" className="drawer-overlay"></label>
 				<ul className="menu p-4 w-80 bg-[#ffffff]">
 					<div className="flex items-center justify-between mx-3">
-						<img src="/images/logo.svg" alt="logo" className="w-[8rem] md:w-[10rem] lg:w-auto" />
+						<div className="px-2 text-[#A02279] text-[1.5rem] font-bold">Vezeti</div>
 						<label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
 							<img src="/images/close.svg" alt="close" className="w-[34px]" />
 						</label>

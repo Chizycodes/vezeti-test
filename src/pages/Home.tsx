@@ -18,6 +18,7 @@ const Home: FC<Props> = () => {
 	const addProduct = (e: any) => {
 		e.preventDefault();
 		setProducts([...products, { ...values, id: products.length + 1 }]);
+		setValues({ name: '', price: 0 });
 	};
 
 	const removeProduct = (id: number) => {
@@ -36,7 +37,7 @@ const Home: FC<Props> = () => {
 			});
 			setProducts(search);
 		}
-	}, [query, products, searchProducts]);
+	}, [query]);
 
 	return (
 		<div className="mb-40 mt-10 w-full max-w-[1280px] mx-auto flex flex-col justify-center items-center">

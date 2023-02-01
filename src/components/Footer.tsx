@@ -20,8 +20,8 @@ const Footer = () => {
 
 			<div className="flex items-center gap-5 md:gap-10 mb-[35px] text-[#111827] font-medium text-xs md:text-[18px]">
 				<a href="/">Conditions of Use</a>
-				<a href="/">Privacy & Policy</a>
-				<a href="/">Press Room</a>
+				<a href="/">Privacy Policy</a>
+				<a href="/">About US</a>
 			</div>
 
 			<p className="text-[#6B7280] text-xs md:text-[18px] font-medium pb-10">&copy; 2021 Vezeti</p>
