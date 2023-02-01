@@ -1,32 +1,47 @@
 import React, { FC, useEffect, useState } from 'react';
 import Product from '../components/Product';
 import ProductModal from '../components/ProductModal';
+import Search from '../components/Search';
 import Products from '../products.json';
 
 interface Props {}
 
 const Home: FC<Props> = () => {
 	const [products, setProducts] = useState([...Products]);
+	const [searchProducts, setSearchProducts] = useState([...products]);
 	const [values, setValues] = useState({
 		name: '',
-		price: '',
+		price: 0,
 	});
+	const [query, setQuery] = useState('');
 
 	const addProduct = (e: any) => {
 		e.preventDefault();
-		Products.push({ ...values, id: products.length + 1 });
+		setProducts([...products, { ...values, id: products.length + 1 }]);
 	};
 
 	const removeProduct = (id: number) => {
-		const newProds = Products.filter((product) => product.id !== id);
-		Products.push()
-
-		console.log(id);
+		const newProds = products.filter((product) => product.id !== id);
+		setProducts(newProds);
 	};
 
+	const handleSearch = () => {};
+
+	useEffect(() => {
+		if (query === '') {
+			setProducts(searchProducts);
+		} else {
+			const search = products.filter((product) => {
+				return product.name.toLowerCase().includes(query.toLowerCase());
+			});
+			setProducts(search);
+		}
+	}, [query, products, searchProducts]);
+
 	return (
-		<div className="mb-40 mt-10 w-full max-w-[1240px] mx-auto flex justify-center items-center">
-			<div className="flex flex-wrap justify-center gap-[40px] px-5">
+		<div className="mb-40 mt-10 w-full max-w-[1280px] mx-auto flex flex-col justify-center items-center">
+			<Search handleSearch={handleSearch} query={query} setQuery={setQuery} />
+			<div className="flex flex-wrap justify-center gap-[40px] px-5 mt-10">
 				{products?.map((product, i) => {
 					return (
 						<div key={i}>

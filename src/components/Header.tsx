@@ -1,4 +1,4 @@
-import React, { FC, useRef } from 'react';
+import React, { FC } from 'react';
 
 interface Props {
 	children: React.ReactNode;
@@ -9,7 +9,7 @@ const Header: FC<Props> = ({ children }) => {
 		<div className="drawer">
 			<input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
 			<div className="drawer-content flex flex-col">
-				<div className="navbar bg-white py-[3rem] mx-auto flex w-full justify-between max-w-[1240px] px-3">
+				<div className="navbar bg-white py-[3rem] mx-auto flex w-full justify-between max-w-[128	0px] px-3">
 					<div>
 						<div className="md:hidden">
 							<label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
