@@ -11,14 +11,14 @@ const Home: FC<Props> = () => {
 	const [searchProducts, setSearchProducts] = useState([...products]);
 	const [values, setValues] = useState({
 		name: '',
-		price: 0,
+		price: '',
 	});
 	const [query, setQuery] = useState('');
 
 	const addProduct = (e: any) => {
 		e.preventDefault();
 		setProducts([...products, { ...values, id: products.length + 1, image: '/images/cart.jpeg' }]);
-		setValues({ name: '', price: 0 });
+		setValues({ name: '', price: "" });
 	};
 
 	const removeProduct = (id: number) => {
