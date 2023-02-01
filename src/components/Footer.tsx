@@ -24,7 +24,7 @@ const Footer = () => {
 				<a href="/">About US</a>
 			</div>
 
-			<p className="text-[#6B7280] text-xs md:text-[18px] font-medium pb-10">&copy; 2021 Vezeti</p>
+			<p className="text-[#6B7280] text-xs md:text-[18px] font-medium pb-10">&copy; 2023 Vezeti</p>
 		</footer>
 	);
 };
