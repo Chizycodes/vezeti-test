@@ -15,13 +15,13 @@ const Product: FC<Props> = ({ product, deleteProduct }) => {
 				<img src="/images/delete.svg" className="w-8" alt="delete" />
 			</div>
 			<div className="mb-4 w-full h-[220px]">
-				<img src="/images/cart.jpeg" alt="product" className="h-full w-full" />
+				<img src={product?.image} alt="product" className="h-full w-full" />
 			</div>
 
 			<div className="text-[12px]">
 				<div className="flex justify-between mb-2 text-sm">
 					<p className="font-bold ">{product?.name}</p>
-					<p>₦{product?.price.toLocaleString()}</p>
+					<p>₦{Number(product?.price).toLocaleString()}</p>
 				</div>
 			</div>
 		</div>

@@ -17,7 +17,7 @@ const Home: FC<Props> = () => {
 
 	const addProduct = (e: any) => {
 		e.preventDefault();
-		setProducts([...products, { ...values, id: products.length + 1 }]);
+		setProducts([...products, { ...values, id: products.length + 1, image: '/images/cart.jpeg' }]);
 		setValues({ name: '', price: 0 });
 	};
 
