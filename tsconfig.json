@@ -18,9 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "api"
   },
   "include": [
     "src"
-  ]
+, "src/products.json"  ]
 }

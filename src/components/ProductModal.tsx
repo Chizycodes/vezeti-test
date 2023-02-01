@@ -1,11 +1,16 @@
 import React, { FC } from 'react';
 
-interface Props {}
+interface Props {
+	values: any;
+	setValues: any;
+	addProduct: any;
+}
 
-const ProductModal: FC<Props> = () => {
-	const addProduct = (e: any) => {
+const ProductModal: FC<Props> = ({ values, setValues, addProduct }) => {
+	const handleChange = (e: any) => {
 		e.preventDefault();
-		console.log('add product');
+		setValues({ ...values, [e.target.name]: e.target.value });
+		console.log(values);
 	};
 	return (
 		<>
@@ -25,15 +30,29 @@ const ProductModal: FC<Props> = () => {
 						<div className="mt-4">
 							<form onSubmit={addProduct}>
 								<div className="mb-[1rem]">
-									<input type="text" placeholder="Product Name" className="v-input" />
+									<input
+										type="text"
+										value={values.name}
+										onChange={(e) => handleChange(e)}
+										name="name"
+										placeholder="Product Name"
+										className="v-input"
+									/>
 								</div>
 
 								<div className="mb-[2rem]">
-									<input type="number" placeholder="Price (NGN)" className="v-input" />
+									<input
+										type="number"
+										value={values.price}
+										name="price"
+										onChange={(e) => handleChange(e)}
+										placeholder="Price (NGN)"
+										className="v-input"
+									/>
 								</div>
 
 								<button type="submit" className="v-btn w-full">
-									Add
+									Add Product
 								</button>
 							</form>
 						</div>

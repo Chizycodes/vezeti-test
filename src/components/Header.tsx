@@ -1,8 +1,10 @@
 import React, { FC, useRef } from 'react';
 
-interface Props {}
+interface Props {
+	children: React.ReactNode;
+}
 
-const Header: FC<Props> = () => {
+const Header: FC<Props> = ({ children }) => {
 	return (
 		<div className="drawer">
 			<input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -46,6 +48,7 @@ const Header: FC<Props> = () => {
 						</label>
 					</div>
 				</div>
+				{children}
 			</div>
 			<div className="drawer-side">
 				<label htmlFor="my-drawer-3" className="drawer-overlay"></label>
